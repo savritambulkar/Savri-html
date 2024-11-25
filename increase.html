@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer</title>
+</head>
+<body>
+    <img id="img" src="pexels-1.jpg" alt="Image">
+    <button onclick="increment()">Increase Size</button>
+    <button onclick="decrement()">Decrease Size</button>
+
+    <script>
+        const image = document.getElementById('img');
+        image.style.height = '300px';
+        image.style.width = '300px';
+
+        function increment() {
+            const a = document.getElementById('img');
+            const currentWidth = parseInt(a.style.width);
+            const currentHeight = parseInt(a.style.height);
+            a.style.width = (currentWidth + 20) + 'px';
+            a.style.height = (currentHeight + 20) + 'px';
+        }
+
+        function decrement() {
+            const b = document.getElementById('img');
+            const currentWidth = parseInt(b.style.width);
+            const currentHeight = parseInt(b.style.height);
+            if (currentWidth > 20 && currentHeight > 20) {
+                b.style.width = (currentWidth - 20) + 'px';
+                b.style.height = (currentHeight - 20) + 'px';
+            }
+        }
+    </script>
+</body>
+</html>
