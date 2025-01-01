@@ -1,10 +1,14 @@
 <script>
-    let str="Hello"
-for(let i=str.length;i>0;i--){
-    for(let j=0;j<i;j++){
-      let c=str.charAt(j)
-        document.write(c)
-    }
-    document.write("<br>")
-}
+    let num1="1234567"
+    let num2="abcdefg"
+    let len1=num1.length;
+    let len2=num2.length;
+    let Maxlen=Math.max(len1,len2)
+       
+       for(let i=0;i<Maxlen;i++){
+           let trianglenumber = i < len1 ? num1.substring(0, i ) :"";
+           //document.write(trianglenumber+"<br>")
+           let triangleletter= i < len2 ? num2.substring(0, len2 - i  ): "";
+            document.write(trianglenumber+"  "+triangleletter+"<br>")
+       }
 </script>
