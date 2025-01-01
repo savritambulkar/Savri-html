@@ -1,10 +1,20 @@
 <script>
-    let str="HelloUser"
-    for(let i=0;i<str.length;i++){
-      for(let j=0;j<=i;j++){
-         let c=str.charAt(j)
-         document.write(c)
-      }
-      document.write("<br>")
+    let word1="Hello"
+    let word2="Would"
+    let len1 = word1.length;
+    let len2 = word2.length;
+    let maxLines = Math.max(len1, len2);
+      //document.write(maxLines)
+    for (let i = 0; i < maxLines; i++) {
+        let trianglePart = i < len1 ? word1.substring(0, i + 1) : "";
+            //document.write(trianglePart+"<br>")
+        let reverseTrianglePart = i < len2 ? word2.substring(0, len2 - i) : "";
+            //document.write(reverseTrianglePart+"<br>")
+        document.write(trianglePart + " " + reverseTrianglePart+"<br>");
     }
+   // document.write("<br>")
+
+
+
+
 </script>
